@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>Color Game</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="heading">COLOR GAME..</div>
+        <div id="content">
+            <div class="container1">
+                <div id="button">
+                    <input id="button1" type="button" value="START" onclick="startTime()">
+                    <span id="button2">0</span>
+                </div>
+                <div class="ques"><p id="ques">red</p></div>
+                <div id="options">
+                    <div class="line">
+                        <div class="options" id="option1"><button id="random1" onclick="compare1()">red</button></div>
+                        <div class="options" id="option2"><button id="random2" onclick="compare2()">yellow</button></div>
+                        <div class="options" id="option3"><button id="random3" onclick="compare3()">green</button></div>
+                    </div>
+                    <div class="line">
+                        <div class="options" id="option4"><button id="random4" onclick="compare4()">orange</button></div>
+                        <div class="options" id="option5"><button id="random5" onclick="compare5()">blue</button></div>
+                        <div class="options" id="option6"><button id="random6" onclick="compare6()">purple</button></div>
+                    </div>
+                    <div class="line">
+                        <div class="options" id="option7"><button id="random7" onclick="compare7()">grey</button></div>
+                        <div class="options" id="option8"><button id="random8" onclick="compare8()">pink</button></div>
+                        <div class="options" id="option9"><button id="random9" onclick="compare9()">brown</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container2"><p>[<span id="score"></span>]</p></div>
+        </div>
+    </body>
+</html>
