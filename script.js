@@ -88,11 +88,11 @@ function startTime()
             document.querySelector("#random8").disabled=true;
             document.querySelector("#random9").disabled=true;
             if(correct < 5)
-                setTimeout(function(){alert("You need to work on your Gaming Skills....\nYour Final Score: " + correct);}, 1000);
+                alert("You need to work on your Gaming Skills....\nYour Final Score: " + correct);
             else if(correct >= 5 && correct <=10)
-                setTimeout(function(){alert("Good !! But you can do better....\nYour Final Score: " + correct);}, 1000);
+                alert("Good !! But you can do better....\nYour Final Score: " + correct);
             else
-                setTimeout(function(){alert("Now that's like a true Gamer....\nYour Final Score: " + correct);}, 1000);
+                alert("Now that's like a true Gamer....\nYour Final Score: " + correct);
             correct=0;
             timeleft=10;
         }
