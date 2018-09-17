@@ -54,7 +54,7 @@ function compare(i)
 }
 function startTime()
 {
-    timeleft=10;
+    timeleft=20;
     document.querySelector("#random1").disabled=false;
     document.querySelector("#random2").disabled=false;
     document.querySelector("#random3").disabled=false;
@@ -75,8 +75,8 @@ function startTime()
         document.getElementById("button2").textContent = timeleft;
         if(timeleft <= 0)
         {
-            clearInterval(Timer);
             document.getElementById("button2").style.backgroundColor = "red";
+            clearInterval(Timer);
             document.getElementById("button1").disabled=false;
             document.querySelector("#random1").disabled=true;
             document.querySelector("#random2").disabled=true;
@@ -87,12 +87,12 @@ function startTime()
             document.querySelector("#random7").disabled=true;
             document.querySelector("#random8").disabled=true;
             document.querySelector("#random9").disabled=true;
-            if(correct < 5)
-                alert("You need to work on your Gaming Skills....\nYour Final Score: " + correct);
-            else if(correct >= 5 && correct <=10)
-                alert("Good !! But you can do better....\nYour Final Score: " + correct);
-            else
-                alert("Now that's like a true Gamer....\nYour Final Score: " + correct);
+                if(correct < 5)
+                    alert("You need to work on your Gaming Skills....\nYour Final Score: " + correct);
+                else if(correct >= 5 && correct <=10)
+                    alert("Good !! But you can do better....\nYour Final Score: " + correct);
+                else
+                    alert("Now that's like a true Gamer....\nYour Final Score: " + correct);
             correct=0;
             timeleft=10;
         }
