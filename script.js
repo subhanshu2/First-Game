@@ -78,12 +78,21 @@ function startTime()
             clearInterval(Timer);
             document.getElementById("button2").style.backgroundColor = "red";
             document.getElementById("button1").disabled=false;
+            document.querySelector("#random1").disabled=true;
+            document.querySelector("#random2").disabled=true;
+            document.querySelector("#random3").disabled=true;
+            document.querySelector("#random4").disabled=true;
+            document.querySelector("#random5").disabled=true;
+            document.querySelector("#random6").disabled=true;
+            document.querySelector("#random7").disabled=true;
+            document.querySelector("#random8").disabled=true;
+            document.querySelector("#random9").disabled=true;
             if(correct < 5)
-                alert("You need to work on your Gaming Skills....\nYour Final Score: " + correct);
+                setTimeout(function(){alert("You need to work on your Gaming Skills....\nYour Final Score: " + correct);}, 1000);
             else if(correct >= 5 && correct <=10)
-                alert("Good !! But you can do better....\nYour Final Score: " + correct);
+                setTimeout(function(){alert("Good !! But you can do better....\nYour Final Score: " + correct);}, 1000);
             else
-                alert("Now that's like a true Gamer....\nYour Final Score: " + correct);
+                setTimeout(function(){alert("Now that's like a true Gamer....\nYour Final Score: " + correct);}, 1000);
             correct=0;
             timeleft=10;
         }
