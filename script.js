@@ -1,5 +1,19 @@
-
 var correct=0;
+var timeleft = 20;
+document.querySelector("#random1").disabled=true;
+document.querySelector("#random2").disabled=true;
+document.querySelector("#random2").style.color="black";
+document.querySelector("#random3").disabled=true;
+document.querySelector("#random4").disabled=true;
+document.querySelector("#random4").style.color="black";
+document.querySelector("#random5").disabled=true;
+document.querySelector("#random6").disabled=true;
+document.querySelector("#random6").style.color="black";
+document.querySelector("#random7").disabled=true;
+document.querySelector("#random7").style.color="black";
+document.querySelector("#random8").disabled=true;
+document.querySelector("#random8").style.color="black";
+document.querySelector("#random9").disabled=true;
 function randomGeneration()
 {
     var colors = ["red","yellow","green","orange","blue","purple","grey","pink","brown"];
@@ -27,87 +41,53 @@ function randomGeneration()
     document.getElementById("random8").innerHTML = list[7];
     document.getElementById("random9").innerHTML = list[8];
 }
-function startTime()
+function compare(i)
 {
-    var timeleft = 10;
-    randomGeneration();
-    document.getElementById("button2").style.backgroundColor = "green";
-    
-    var Timer = setInterval(function()
-    {
-        timeleft--;
-        document.getElementById("button2").textContent = timeleft;
-        
-        
-        if(timeleft <= 0)
-        {
-            clearInterval(Timer);
-            document.getElementById("button2").style.backgroundColor = "red";
-
-        }
-        
-    },1000);
-}
-function compare(lhs,rhs)
-{
-    if(lhs == rhs)
+    var rhs = i;
+    var lhs = document.getElementById("ques").innerHTML;    
+    if(lhs == rhs )
     {
         ++correct;
         document.getElementById("score").innerHTML = correct;        
     }
     randomGeneration();
 }
-function compare1()
+function startTime()
 {
-    var lhs = document.getElementById("ques").innerHTML;
-    var rhs = document.getElementById("random1").innerHTML;
-    compare(lhs,rhs);
+    timeleft=10;
+    document.querySelector("#random1").disabled=false;
+    document.querySelector("#random2").disabled=false;
+    document.querySelector("#random3").disabled=false;
+    document.querySelector("#random4").disabled=false;
+    document.querySelector("#random5").disabled=false;
+    document.querySelector("#random6").disabled=false;
+    document.querySelector("#random7").disabled=false;
+    document.querySelector("#random8").disabled=false;
+    document.querySelector("#random9").disabled=false;
+    randomGeneration();
+    document.getElementById("score").innerHTML = correct;
+    document.getElementById("button2").textContent = timeleft;
+    document.getElementById("button1").disabled=true;
+    document.getElementById("button2").style.backgroundColor = "green";
+    var Timer = setInterval(function()
+    {
+        timeleft--;
+        document.getElementById("button2").textContent = timeleft;
+        if(timeleft <= 0)
+        {
+            clearInterval(Timer);
+            document.getElementById("button2").style.backgroundColor = "red";
+            document.getElementById("button1").disabled=false;
+            if(correct < 5)
+                alert("You need to work on your Gaming Skills....\nYour Final Score: " + correct);
+            else if(correct >= 5 && correct <=10)
+                alert("Good !! But you can do better....\nYour Final Score: " + correct);
+            else
+                alert("Now that's like a true Gamer....\nYour Final Score: " + correct);
+            correct=0;
+            timeleft=10;
+        }
+    },1000);
 }
-function compare2()
-{
-    var lhs = document.getElementById("ques").innerHTML;
-    var rhs = document.getElementById("random2").innerHTML;
-    compare(lhs,rhs);
-}
-function compare3()
-{
-    var lhs = document.getElementById("ques").innerHTML;
-    var rhs = document.getElementById("random3").innerHTML;
-    compare(lhs,rhs);
-}
-function compare4()
-{
-    var lhs = document.getElementById("ques").innerHTML;
-    var rhs = document.getElementById("random4").innerHTML;
-    compare(lhs,rhs);
-}
-function compare5()
-{
-    var lhs = document.getElementById("ques").innerHTML;
-    var rhs = document.getElementById("random5").innerHTML;
-    compare(lhs,rhs);
-}
-function compare6()
-{
-    var lhs = document.getElementById("ques").innerHTML;
-    var rhs = document.getElementById("random6").innerHTML;
-    compare(lhs,rhs);
-}
-function compare7()
-{
-    var lhs = document.getElementById("ques").innerHTML;
-    var rhs = document.getElementById("random7").innerHTML;
-    compare(lhs,rhs);
-}
-function compare8()
-{
-    var lhs = document.getElementById("ques").innerHTML;
-    var rhs = document.getElementById("random8").innerHTML;
-    compare(lhs,rhs);
-}
-function compare9()
-{
-    var lhs = document.getElementById("ques").innerHTML;
-    var rhs = document.getElementById("random9").innerHTML;
-    compare(lhs,rhs);
-}
+
+

@@ -3,36 +3,39 @@
     <head>
         <title>Color Game</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        
     </head>
     <body>
         <div id="heading">COLOR GAME..</div>
         <div id="content">
             <div class="container1">
                 <div id="button">
-                    <input id="button1" type="button" value="START" onclick="startTime()">
+                    <button id="button1" onclick="startTime()">START</button>
                     <span id="button2">0</span>
                 </div>
                 <div class="ques"><p id="ques">red</p></div>
                 <div id="options">
                     <div class="line">
-                        <div class="options" id="option1"><button id="random1" onclick="compare1()">red</button></div>
-                        <div class="options" id="option2"><button id="random2" onclick="compare2()">yellow</button></div>
-                        <div class="options" id="option3"><button id="random3" onclick="compare3()">green</button></div>
+                        <button class="random" id="random1" onclick="compare(document.getElementById('random1').innerHTML)">red</button>
+                        <button class="random" id="random2" onclick="compare(document.getElementById('random2').innerHTML)">yellow</button>
+                        <button class="random" id="random3" onclick="compare(document.getElementById('random3').innerHTML)">green</button>
                     </div>
                     <div class="line">
-                        <div class="options" id="option4"><button id="random4" onclick="compare4()">orange</button></div>
-                        <div class="options" id="option5"><button id="random5" onclick="compare5()">blue</button></div>
-                        <div class="options" id="option6"><button id="random6" onclick="compare6()">purple</button></div>
+                        <button class="random" id="random4" onclick="compare(document.getElementById('random4').innerHTML)">orange</button>
+                        <button class="random" id="random5" onclick="compare(document.getElementById('random5').innerHTML)">blue</button>
+                        <button class="random" id="random6" onclick="compare(document.getElementById('random6').innerHTML)">purple</button>
                     </div>
                     <div class="line">
-                        <div class="options" id="option7"><button id="random7" onclick="compare7()">grey</button></div>
-                        <div class="options" id="option8"><button id="random8" onclick="compare8()">pink</button></div>
-                        <div class="options" id="option9"><button id="random9" onclick="compare9()">brown</button></div>
+                        <button class="random" id="random7" onclick="compare(document.getElementById('random7').innerHTML)">grey</button>
+                        <button class="random" id="random8" onclick="compare(document.getElementById('random8').innerHTML)">pink</button>
+                        <button class="random" id="random9" onclick="compare(document.getElementById('random9').innerHTML)">brown</button>
                     </div>
                 </div>
             </div>
             <div class="container2"><p>[<span id="score"></span>]</p></div>
         </div>
+        <div class="btn">button</div>
+        
+        <script src="script.js"></script>
     </body>
 </html>
